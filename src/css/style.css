@@ -37,7 +37,7 @@ main {
   align-items: center;
   height: auto;
   width: 500px;
-  /* padding-top: 80px; */
+  padding: 18px;
   gap: 20px;
 
   h1 {
@@ -127,5 +127,31 @@ main {
     width: 100%;
     height: 100%;
     object-fit: contain;
+  }
+}
+
+/* RESPONSIVE DESING */
+@media screen and (max-width: 768px) {
+  main {
+    width: 90vw;
+      
+    h1 {
+        font-size: 1.5em;
+    }
+
+    button{
+      width: 200px;
+      height: 40px;
+      font-size: medium;
+    }
+
+    span {
+      font-size: 1rem;
+    }
+  }
+
+  #img-preview {
+    width: 200px;
+    height: 200px;
   }
 }
