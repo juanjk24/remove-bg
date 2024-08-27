@@ -10,7 +10,7 @@
 
 body {
   font-family: 'Onest Variable', sans-serif;
-  height: 100vh;
+  height: 100dvh;
   width: 100vw;
   overflow: hidden;
   color: #444;
