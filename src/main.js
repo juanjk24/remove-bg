@@ -1,4 +1,4 @@
-import "./style.css"
+import "./css/style.css"
 
 const button = document.querySelector("#upload-img")
 const imgPreview = document.querySelector("#img-preview")
