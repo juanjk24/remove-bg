@@ -1,5 +1,7 @@
 import "./css/style.css"
 
+import "./drop-file.js"
+
 const button = document.querySelector("#upload-img")
 const imgPreview = document.querySelector("#img-preview")
 const buttonDownload = document.querySelector("#download-img")
@@ -76,6 +78,7 @@ buttonDownload.addEventListener("click", () => {
     // Simular un clic en el enlace para iniciar la descarga
     link.click()
   } else {
-    alert("Primero carga una imagen para descargar.")
+    //alert("Primero carga una imagen para descargar.")
+    return
   }
 })
