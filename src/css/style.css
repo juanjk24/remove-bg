@@ -135,6 +135,18 @@ main {
   }
 }
 
+#img-preview {
+  &.dragover {
+    scale: 1.1;
+  }
+}
+
+* {
+  &.dragover {
+    background-color: rgba(0, 0, 0, 0.137);
+  }
+}
+
 /* RESPONSIVE DESING */
 @media screen and (max-width: 768px) {
   main {
