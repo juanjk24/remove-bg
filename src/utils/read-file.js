@@ -29,24 +29,24 @@ export function readFile({ file }) {
       canvas = document.createElement("canvas")
       const ctx = canvas.getContext("2d")
 
-      // Configura el tamaño del canvas al tamaño de la imagen
+      // Configurar el tamaño del canvas al tamaño de la imagen
       canvas.width = img.width
       canvas.height = img.height
 
       // Dibuja la imagen en el canvas
       ctx.drawImage(img, 0, 0)
 
-      // Obtén la data de los píxeles de la imagen
+      // Obtener la data de los píxeles de la imagen
       const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
       const data = imageData.data
 
-      // Recorrer cada píxel y hacer transparente el color que deseas eliminar
+      // Recorrer cada píxel y hacer transparente el color al que se desea eliminar
       for (let i = 0; i < data.length; i += 4) {
         const r = data[i] // Rojo
         const g = data[i + 1] // Verde
         const b = data[i + 2] // Azul
 
-        // Aquí se define el color que se eliminará (fondo blanco, en este caso)
+        // Aquí se define el color que se eliminará (en este caso, fondo blanco)
         if (r > 240 && g > 240 && b > 240) {
           // Si el píxel es blanco, lo hacemos transparente
           data[i + 3] = 0 // Alpha a 0 (transparente)
